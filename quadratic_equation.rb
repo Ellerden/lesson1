@@ -2,22 +2,22 @@
 # Квадратное уравнение
 puts "Давайте вычислим квадратное уравнение! ax^2 + bx + c = 0"
 puts "Введите коэффициент a"
-a = STDIN.gets.to_f
+a = gets.to_f
 puts "Введите коэффициент b"
-b = STDIN.gets.to_f
+b = gets.to_f
 puts "Введите коэффициент с"
-c = STDIN.gets.to_f
+c = gets.to_f
 
 d = (b ** 2) - 4 * a * c
 print "Дискриминант: D = #{d}, "
-
+sqrt_d = Math.sqrt(d)
 if d > 0
-  x1 = (-b + Math.sqrt(d)) / (2 * a)
-  x2 = (-b - Math.sqrt(d)) / (2 * a)
-  print "корни: x1 = #{x1}, x2 = #{x2}\n"
+  x1 = (-b + sqrt_d) / (2 * a)
+  x2 = (-b - sqrt_d) / (2 * a)
+  puts "корни: x1 = #{x1}, x2 = #{x2}"
 elsif d == 0
   x1 = -b / (2 * a)
-  print "корень: x1 = x2 = #{x1}\n"
+  puts "корень: x1 = x2 = #{x1}"
 else
-  print "корней нет\n"
+  puts "корней нет"
 end
